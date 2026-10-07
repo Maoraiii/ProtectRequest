@@ -1,0 +1,4 @@
+colorama==0.4.6
+geoip2==4.8.0
+pyfiglet==1.0.2
+Requests==2.32.3
