@@ -113,12 +113,11 @@ class ConfigManager:
 
 # --- ASCII Art Banner ---
 def print_banner():
-    banner = pyfiglet.figlet_format("RequestShield")
+    banner = pyfiglet.figlet_format("ProtectShield")
     print(Fore.CYAN + Style.BRIGHT + banner)
     print(Fore.LIGHTCYAN_EX + "Your comprehensive log analysis tool for enhanced request monitoring.\n")
 
 # --- RISK SCORE CALCULATION ---
-
 class RiskScoreCalculator:
     def __init__(self, config: ConfigManager):
         self.config = config
@@ -158,7 +157,6 @@ class RiskScoreCalculator:
 
 
 # --- GEOLOCATION & ABUSE CHECK ---
-
 class GeoLocationChecker:
     """Checks geolocation of IP addresses."""
     
@@ -199,7 +197,6 @@ class AbuseIPChecker:
 
 
 # --- TRAFFIC ANALYSIS ---
-
 class TrafficAnalyzer:
     """Analyzes traffic and identifies anomalies."""
     
@@ -302,7 +299,6 @@ class TrafficAnalyzer:
             })
 
 # --- HTML REPORT GENERATION ---
-
 def generate_html_report(report_filename: str, traffic_stats: Dict[str, Any], get_country: callable):
     """Genera un report HTML basato sui dati di traffico."""
     current_datetime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
