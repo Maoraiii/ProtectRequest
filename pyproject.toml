@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "protectrequest"
+version = "2.0.0"
+description = "Multi-format log threat analyzer (web, SSH, IIS, JSON)"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["requests>=2.31", "geoip2>=4.7", "colorama>=0.4.6"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+protectrequest = "protectrequest.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["protectrequest*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
